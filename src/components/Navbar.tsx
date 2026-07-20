@@ -2,7 +2,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-light fixed-top">
         <div className="container">
-          <a className="navbar-brand" href="#accueil">Ton Nom</a>
+          <a className="navbar-brand" href="#accueil">BLANCHARD-TOULET Lucas</a>
           <button
             className="navbar-toggler"
             type="button"
