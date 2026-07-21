@@ -1,19 +1,73 @@
+@font-face {
+  font-family: 'Space_Grotesk';
+  src: url('./assets/fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space_Grotesk';
+  src: url('./assets/fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/static/Inter_18pt-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/static/Inter_18pt-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/static/Inter_18pt-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrain_Mono';
+  src: url('./assets/fonts/JetBrains_Mono/static/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrain_Mono';
+  src: url('./assets/fonts/JetBrains_Mono/static/JetBrainsMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
+  --font-heading: 'Space_Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrain_Mono', ui-monospace, monospace;
+}
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+[data-bs-theme="dark"] {
+  --bg: #0d1117;
+  --bg-alt: #161b22;
+  --text: #c9d1d9;
+  --text-muted: #8b949e;
+  --border: #30363d;
+  --accent: #f2a541;
+}
 
-  font: 18px/145% var(--sans);
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+[data-bs-theme="light"] {
+  --bg: #ffffff;
+  --bg-alt: #f6f8fa;
+  --text: #1f2328;
+  --text-muted: #57606a;
+  --border: #d0d7de;
+  --accent: #d4831f;
+}
+
+* {
   box-sizing: border-box;
 }
 
@@ -25,10 +79,19 @@
 
 body {
   margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-h1, h2, h3 {
-  color: var(--text-h);
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--text);
   margin: 0;
 }
 

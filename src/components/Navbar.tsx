@@ -1,6 +1,8 @@
+import ThemeToggle from './ThemeToggle'
+
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-light fixed-top">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div className="container">
           <a className="navbar-brand" href="#accueil">BLANCHARD-TOULET Lucas</a>
           <button
@@ -27,6 +29,9 @@ function Navbar() {
               </li>
             </ul>
           </div>
+        </div>
+        <div className='me-3'>
+          <ThemeToggle/>
         </div>
       </nav>
   )
