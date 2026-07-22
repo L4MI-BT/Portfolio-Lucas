@@ -1,10 +1,11 @@
 import ThemeToggle from './ThemeToggle'
+import { HashLink } from 'react-router-hash-link'
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div className="container">
-          <a className="navbar-brand" href="#accueil">BLANCHARD-TOULET Lucas</a>
+          <HashLink className="navbar-brand" to="/">BLANCHARD-TOULET Lucas</HashLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -16,19 +17,19 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navMenu">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#a-propos">À propos</a>
+                <HashLink className='nav-link' to="/#a-propos">À propos</HashLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#parcours">Mon parcours</a>
+                <HashLink className='nav-link' to="/#parcours">Mon parcours</HashLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#projets">Projets</a>
+                <HashLink className='nav-link' to="/#projets">Projets</HashLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#competences">Compétences</a>
+                <HashLink className='nav-link' to="/#competences">Compétences</HashLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#contact">Contact</a>
+                <HashLink className='nav-link' to="/#contact">Contact</HashLink>
               </li>
             </ul>
           </div>

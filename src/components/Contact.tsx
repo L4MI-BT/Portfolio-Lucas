@@ -14,7 +14,7 @@ function Contact() {
           l.blanchard-toulet@outlook.fr
         </a>
 
-        <a href="/BLANCHARD-TOULET_LUCAS_CV_alternance.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary contact-cv">
+        <a href="/Blanchard-Toulet_Lucas_CV_alternance.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary contact-cv">
           <FontAwesomeIcon icon={faFileArrowDown} className="me-2" />
           Télécharger mon CV
         </a>
