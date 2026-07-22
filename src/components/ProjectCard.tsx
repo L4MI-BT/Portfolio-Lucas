@@ -25,7 +25,7 @@ function ProjectCard({ projet }: { projet: Projet }) {
         <div className="project-face project-verso">
           <p>{projet.description}</p>
           {projet.lien && (
-            <a href={projet.lien} target="_blank" rel="noopener noreferrer">
+            <a href={projet.lien} target="_blank" rel="noopener noreferrer" aria-label={`Voir le code du projet ${projet.titre}`}>
               Voir le code
             </a>
           )}

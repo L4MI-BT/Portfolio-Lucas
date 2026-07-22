@@ -9,11 +9,12 @@ function App() {
   return (
     <>
       <Navbar />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/mentions-legales" element={<MentionsLegales />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+        </Routes>
+      </main>
 
       <Footer />
     </>
