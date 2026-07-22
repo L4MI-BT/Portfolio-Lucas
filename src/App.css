@@ -1,3 +1,186 @@
-body {
-  padding-top: 76px;
+/* ==========================================================================
+   Base / Layout global des sections
+   ========================================================================== */
+
+section {
+  padding-block: 6rem;
+  padding-inline: max(1.5rem, calc((100% - 960px) / 2));
+  scroll-margin-top: 76px;
 }
+
+#accueil {
+  padding-top: 8rem;
+}
+
+section:nth-of-type(even) {
+  background-color: var(--bg-alt);
+}
+
+
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+
+.navbar {
+  border-bottom: 1px solid var(--border);
+}
+
+
+/* ==========================================================================
+   Boutons (surcharge des couleurs Bootstrap)
+   ========================================================================== */
+
+.btn-primary {
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: var(--accent);
+  --bs-btn-hover-bg: #d98f2e;
+  --bs-btn-hover-border-color: #d98f2e;
+  --bs-btn-active-bg: #c47f28;
+  --bs-btn-active-border-color: #c47f28;
+  --bs-btn-focus-shadow-rgb: 242, 165, 65;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--accent);
+  --bs-btn-border-color: var(--accent);
+  --bs-btn-hover-bg: var(--accent);
+  --bs-btn-hover-border-color: var(--accent);
+  --bs-btn-active-bg: var(--accent);
+  --bs-btn-active-border-color: var(--accent);
+}
+
+
+/* ==========================================================================
+   Compétences
+   ========================================================================== */
+
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.competences-groupe {
+  background-color: var(--card-bg);
+}
+
+.skill-card {
+  flex: 0 1 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem 0.8rem;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.skill-icon {
+  font-size: 2rem;
+}
+
+.skill-card span {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--text);
+}
+
+/* ==========================================================================
+   Projets
+   ========================================================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card-container {
+  perspective: 1200px;
+  height: 320px;
+}
+
+.project-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.project-card-container:hover .project-card {
+  transform: rotateY(180deg);
+}
+
+.project-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  background-color: var(--project-card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  overflow-wrap: break-word;
+}
+
+.project-recto {
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.project-verso {
+  justify-content: space-between;
+  transform: rotateY(180deg);
+}
+
+.project-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.projet-technos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.tech-badge {
+  background-color: color-mix(in srgb, var(--accent) 15%, transparent);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 20px;
+  padding: 0.3rem 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+

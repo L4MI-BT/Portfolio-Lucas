@@ -49,24 +49,6 @@
   --font-mono: 'JetBrain_Mono', ui-monospace, monospace;
 }
 
-[data-bs-theme="dark"] {
-  --bg: #0d1117;
-  --bg-alt: #161b22;
-  --text: #c9d1d9;
-  --text-muted: #8b949e;
-  --border: #30363d;
-  --accent: #f2a541;
-}
-
-[data-bs-theme="light"] {
-  --bg: #ffffff;
-  --bg-alt: #f6f8fa;
-  --text: #1f2328;
-  --text-muted: #57606a;
-  --border: #d0d7de;
-  --accent: #d4831f;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -98,3 +80,26 @@ h1, h2, h3, h4 {
 p {
   margin: 0;
 }
+
+[data-bs-theme="dark"] {
+  --bg: #0d1117;
+  --bg-alt: #161b22;
+  --card-bg: #242b36;
+  --project-card-bg: #2d3644;
+  --text: #c9d1d9;
+  --text-muted: #8b949e;
+  --border: #30363d;
+  --accent: #f2a541;
+}
+
+[data-bs-theme="light"] {
+  --bg: #ffffff;
+  --bg-alt: #f6f8fa;
+  --card-bg: #ffffff;
+  --project-card-bg: #e4e8ec;
+  --text: #1f2328;
+  --text-muted: #57606a;
+  --border: #d0d7de;
+  --accent: #d4831f;
+}
+

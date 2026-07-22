@@ -1,4 +1,4 @@
-import ProjectCard from "./ProjectCard"
+import ProjectCard from './ProjectCard'
 
 type Projet = {
   titre: string
@@ -10,6 +10,18 @@ type Projet = {
 }
 
 const projets: Projet[] = [
+  {
+    titre: 'Reco',
+    description: 'Réseau social de recommandations culturelles (musique, films, recettes). Projet personnel en cours de développement.',
+    technos: ['Java', 'Spring Boot', 'PostgreSQL', 'React', 'TypeScript'],
+    statut: 'En cours de développement',
+  },
+  {
+    titre: 'Ce portfolio',
+    description: 'Le site que tu es en train de regarder ! Développé avec React, TypeScript et Bootstrap.',
+    technos: ['React', 'TypeScript', 'Vite', 'Bootstrap'],
+    lien: 'https://github.com/L4MI-BT/Portfolio-Lucas',
+  },
   {
     titre: 'Lexigle',
     description: "Glossaire d'acronymes collaboratif interne, développé lors de mon stage chez Crédit Agricole Touraine-Poitou (Lab'TP). De la modélisation des données au déploiement.",
@@ -23,27 +35,17 @@ const projets: Projet[] = [
     technos: ['Symfony', 'MySQL', 'Bootstrap'],
     lien: 'https://github.com/L4MI-BT/Grand_Angle_Symfony',
   },
-  {
-    titre: 'Ce portfolio',
-    description: 'Le site que tu es en train de regarder ! Développé avec React, TypeScript et Bootstrap.',
-    technos: ['React', 'TypeScript', 'Vite', 'Bootstrap'],
-    lien: 'https://github.com/L4MI-BT/Portfolio-Lucas',
-  },
-  {
-    titre: 'Reco',
-    description: 'Réseau social de recommandations culturelles (musique, films, recettes). Projet personnel en cours de développement.',
-    technos: ['Java', 'Spring Boot', 'PostgreSQL', 'React', 'TypeScript'],
-    statut: 'En cours de développement',
-  },
 ]
 
 function Projects() {
   return (
     <section id="projets">
-      <h2>Projets</h2>
-      {projets.map((projet) => (
-        <ProjectCard key={projet.titre} projet={projet} />
-      ))}
+      <h2 className="text-center mb-5">Projets</h2>
+      <div className="projects-grid">
+        {projets.map((projet) => (
+          <ProjectCard key={projet.titre} projet={projet} />
+        ))}
+      </div>
     </section>
   )
 }

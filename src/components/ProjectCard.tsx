@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 type Projet = {
   titre: string
   description: string
@@ -10,35 +8,36 @@ type Projet = {
 }
 
 function ProjectCard({ projet }: { projet: Projet }) {
-  const [isFlipped, setIsFlipped] = useState(false)
-
   return (
-    <div className="projet-card" onClick={() => setIsFlipped(!isFlipped)}>
-      {!isFlipped ? (
-        <div className="projet-recto">
+    <div className="project-card-container">
+      <div className="project-card">
+
+        <div className="project-face project-recto">
           <h3>{projet.titre}</h3>
-          <ul className="projet-technos">
+          <div className="projet-technos">
             {projet.technos.map((tech) => (
-              <li key={tech}>{tech}</li>
+              <span key={tech} className="tech-badge">{tech}</span>
             ))}
-          </ul>
+          </div>
+          <span className="project-hint">Survoler pour en savoir plus</span>
         </div>
-      ) : (
-        <div className="projet-verso">
+
+        <div className="project-face project-verso">
           <p>{projet.description}</p>
           {projet.lien && (
-            <a href={projet.lien} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+            <a href={projet.lien} target="_blank" rel="noopener noreferrer">
               Voir le code
             </a>
           )}
           {projet.document && (
-            <a href={projet.document} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+            <a href={projet.document} target="_blank" rel="noopener noreferrer">
               Voir mon mémoire
             </a>
           )}
           {projet.statut && <p className="projet-statut">{projet.statut}</p>}
         </div>
-      )}
+
+      </div>
     </div>
   )
 }

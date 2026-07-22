@@ -19,6 +19,9 @@ function Navbar() {
                 <a className="nav-link" href="#a-propos">À propos</a>
               </li>
               <li className="nav-item">
+                <a className="nav-link" href="#parcours">Mon parcours</a>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href="#projets">Projets</a>
               </li>
               <li className="nav-item">
