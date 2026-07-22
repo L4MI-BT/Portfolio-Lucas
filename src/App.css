@@ -184,3 +184,71 @@ section:nth-of-type(even) {
   font-size: 0.8rem;
 }
 
+/* ==========================================================================
+   Parcours — frise verticale
+   ========================================================================== */
+
+.timeline {
+  position: relative;
+  padding-left: 1.15rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  width: 2px;
+  background-color: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: 0.35rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  border: 2px solid var(--bg);
+}
+
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.timeline-item h4 {
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+.timeline-item p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.parcours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+@media (max-width: 768px) {
+  .parcours-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
