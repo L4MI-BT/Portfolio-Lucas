@@ -2,7 +2,7 @@
 
 Site portfolio personnel présentant mon parcours, mes compétences et mes projets en développement web.
 
-🔗 [Voir le site en ligne](#) <!-- lien à ajouter une fois déployé -->
+🔗 [Voir le site en ligne](https://lucasblanchardtoulet.fr/)
 
 ## Stack technique
 
