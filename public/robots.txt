@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tondomaine.fr/sitemap.xml
+Sitemap: https://lucasblanchardtoulet.fr/sitemap.xml

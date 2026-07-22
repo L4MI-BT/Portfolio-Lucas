@@ -1,5 +1,4 @@
 import { useRef } from 'react'
-import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
 import { Collapse } from 'bootstrap'
 import ThemeToggle from './ThemeToggle'
@@ -17,7 +16,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
       <div className="container">
-        <Link className="navbar-brand" to="/#accueil">BLANCHARD-TOULET Lucas</Link>
+        <HashLink className="navbar-brand" to="/#accueil">BLANCHARD-TOULET Lucas</HashLink>
 
         <div className="d-flex align-items-center gap-3 order-lg-2">
           <ThemeToggle />
