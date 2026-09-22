@@ -17,6 +17,7 @@ const competences: Record<string, Competence[]> = {
     { nom: 'PHP / Symfony', icone: faPhp, couleur: '#777bb4' },
     { nom: 'C# / .NET', icone: faCode, couleur: '#684d9a' },
     { nom: 'SQL', icone: faDatabase, couleur: '#4479a1' },
+    { nom: 'Java', icone: faJava, couleur: '#f89820' }
   ],
   frontend: [
     { nom: 'HTML5', icone: faHtml5, couleur: '#e34f26' },
@@ -30,7 +31,6 @@ const competences: Record<string, Competence[]> = {
     { nom: 'Docker', icone: faDocker, couleur: '#2496ed' },
   ],
   decouverte: [
-    { nom: 'Java', icone: faJava, couleur: '#f89820' },
     { nom: 'Python', icone: faPython, couleur: '#3776ab' },
     { nom: 'TypeScript', icone: faTypescript, couleur: '#3178c6' },
     { nom: 'React', icone: faReact, couleur: '#61dafb' },
