@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
+import {faMoon, faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons'
 
 function ThemeToggle() {
   const [isDark, setIsDark] = useState(() => {
@@ -20,7 +20,7 @@ function ThemeToggle() {
       onClick={() => setIsDark(!isDark)}
       aria-label={isDark ? 'Activer le mode clair' : 'Activer le mode sombre'}
     >
-      <FontAwesomeIcon icon={isDark ? faSun : faMoon} />
+      <FontAwesomeIcon icon={isDark ? faCircleHalfStroke : faMoon} />
     </button>
   )
 }

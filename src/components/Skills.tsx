@@ -16,8 +16,8 @@ const competences: Record<string, Competence[]> = {
   backend: [
     { nom: 'PHP / Symfony', icone: faPhp, couleur: '#777bb4' },
     { nom: 'C# / .NET', icone: faCode, couleur: '#684d9a' },
-    { nom: 'SQL', icone: faDatabase, couleur: '#4479a1' },
-    { nom: 'Java', icone: faJava, couleur: '#f89820' }
+    { nom: 'Java', icone: faJava, couleur: '#f89820' },
+    { nom: 'SQL', icone: faDatabase, couleur: '#4479a1' }
   ],
   frontend: [
     { nom: 'HTML5', icone: faHtml5, couleur: '#e34f26' },
